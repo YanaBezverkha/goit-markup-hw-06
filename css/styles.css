@@ -93,7 +93,6 @@ button {
   letter-spacing: 0.02em;
 }
 
-
 /**
   |===================================================================
   |             Header
@@ -154,7 +153,7 @@ button {
   content: " ";
   display: block;
   position: relative;
-  top:24px;
+  top: 24px;
   width: 100%;
   height: 4px;
   border-radius: 2px;
@@ -205,8 +204,8 @@ button {
 
 .footer-container {
   display: flex;
-  gap: 120px;
   align-items: baseline;
+  gap: 100px;
 }
 
 .logo-footer {
@@ -234,7 +233,7 @@ button {
   width: 264px;
 }
 
-.footer-text-media {
+.footer-subheader {
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
@@ -273,6 +272,36 @@ button {
   fill: var(--secondary-white-color);
 }
 
+
+.wrap-form {
+  display: flex;
+  gap: 24px;
+}
+
+.form-window-footer {
+  padding: 8px 16px;
+  height: 40px;
+  width: 264px;
+  background-color: #2e2f42;
+  color: var(--white-color);
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+}
+
+.footer-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 16px;
+  color: var(--white-color);
+  background-color: var(--active-color);
+  border-radius: 4px;
+}
+
+.subscribe-icon {
+  fill: currentColor;
+}
 /**
   |===================================================================
   |                 Index.html
@@ -310,7 +339,7 @@ button {
   color: var(--white-color);
 }
 
-.hero-button {
+.main-button {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -334,12 +363,6 @@ button {
 .hero-button:focus {
   background-color: var(--pressed-state);
 }
-
-
-
-
-
-
 
 .feature-list {
   display: flex;
@@ -563,14 +586,11 @@ button {
   transform: translateY(0);
 }
 
-
-
 /**
   |===================================================================
   |          Backdrop  Modal
   |===================================================================
 */
-
 
 .backdrop {
   position: fixed;
@@ -581,10 +601,8 @@ button {
   height: 100%;
 
   background-color: rgba(46, 47, 66, 0.4);
-  /* opacity: 1;
-  pointer-events: auto;
-  visibility: visible; */
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -608,28 +626,32 @@ button {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
-  transform:translate(-50%, -50%) scale(0.1);
+  transform: translate(-50%, -50%) scale(0.1);
   opacity: 0;
 }
 
 .modal-button {
   display: block;
-  margin-left: auto ;
+  margin-left: auto;
+  margin-bottom: 24px;
   width: 24px;
   height: 24px;
 
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button:hover,
@@ -641,4 +663,71 @@ button {
 
 .modal-icon {
   fill: currentColor;
+}
+
+
+
+
+.modal-header {
+  display: block;
+  margin-bottom: 16px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--main-color);
+}
+
+.form-container {
+  position: relative;
+ margin-bottom: 8px;
+font-size: 12px;
+line-height: 14px;
+letter-spacing: 0.04em;
+color: rgba(46, 47, 66, 0.4);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+ color: #8E8F99; 
+}
+
+.form-input {
+  padding: 8px 16px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+}
+
+.form-icon {
+  position: absolute;
+  top: 26px;
+  left: 16px;
+  fill: #8E8F99;
+}
+
+.form-textarea {
+  padding: 8px 16px;
+  width: 100%;
+  resize: none;
+  height: 120px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+}
+
+.form-container-agree {
+margin-bottom: 24px;
+}
+
+.form-label-agree {
+color: #8E8F99;
+}
+
+.form-link-agree {
+  display: inline;
+text-decoration: underline;
+color: var(--active-color);
 }
